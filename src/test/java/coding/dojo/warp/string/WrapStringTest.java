@@ -36,4 +36,10 @@ public class WrapStringTest {
         String result = WrapString.wrap("wordstring word", 4);
         assertThat(result, is("word\nstri\nng\nword"));
     }
+
+    @Test
+    public void should_return_4_line_when_given_wordstring_word_and_2_length() throws Exception {
+        String result = WrapString.wrap("wordstring word", 2);
+        assertThat(result, is("wo\nrd\nst\nri\nng\nwo\nrd"));
+    }
 }
